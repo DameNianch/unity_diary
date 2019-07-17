@@ -56,7 +56,12 @@
 
 ### 材質の管理
 - フォルダにまとめておく
-- 感想：sceneと同じ階層に入れるのは、どういう意図があるのだろうか？
+- 問題
+    - Emission値の選択肢が無いが、どういうことだ？
+    - 参考：[ここ](https://unity3d.com/jp/learn/tutorials/projects/hajiuni/adding-obstacles-and-restart?playlist=45986)の「DengerWallの色を設定」
+    - Intensityのこと？
+- 感想
+    - sceneと同じ階層に入れるのは、どういう意図があるのだろうか？
 
 
 ### オブジェクトへの機能追加
@@ -93,13 +98,25 @@
         1. 一度、PrefabにItemMaterialを追加
         1. ItemMaterial付与
         1. ItemMaterialをMaterialフォルダに移動
+    - 解決方法
+         - ヒエラルキーにあるオブジェクトに適用してからapplyをするっぽい。（たぶん）
+         - applyすると同じprefabから生成された全てのオブジェクトに反映
+
 - 感想
     - 摩擦係数（？）無いと動かしにくい(壺おじさんかよ)
     - Drag=2に変更したらいい感じ
+
+## その他技術
 
 ### UIの表示
 - テキスト表示をしたが、あまり理解できていないので放置する。
 - textオブジェクトはcanvasに自動追加
 - textオブジェクトはcreateからUIで選択
 
-### 
+### 明るさの調整
+- Directional Lightの Intensityを調整
+- Lightが弱くなるとIntensityの高いオブジェクトが光って見える
+
+### シーンの扱い
+- UnityEngine.SceneManagementクラスを利用
+- 詳細は放置
